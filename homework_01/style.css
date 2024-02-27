@@ -23,6 +23,7 @@ body {
 .header__logo {
   height: 50px;
 }
+
 .banner {
   width: 1200px;
   height: 758px;
@@ -166,25 +167,125 @@ body {
   display: flex;
   justify-content: space-between;
 }
-
-#card-a {
+.project #card-a {
   grid-area: a;
   border-top-right-radius: 70px;
 }
-
-#card-b {
+.project #card-b {
   grid-area: b;
   border-top-left-radius: 70px;
 }
-
-#card-c {
+.project #card-c {
   grid-area: c;
   border-bottom-right-radius: 70px;
 }
-
-#card-d {
+.project #card-d {
   grid-area: d;
   border-bottom-left-radius: 70px;
+}
+
+.counter {
+  display: flex;
+  background: rgb(244, 240, 236);
+  justify-content: center;
+  align-items: center;
+  gap: 54px;
+  margin: 96px 0 96px 0;
+  height: 457px;
+  width: 100%;
+}
+.counter__single {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 192px;
+  height: 155px;
+}
+.counter__single-number {
+  color: rgb(205, 162, 116);
+  font-family: DM Serif Display, serif;
+  font-size: 85px;
+  font-weight: 400;
+  line-height: 125%;
+  text-align: left;
+}
+.counter__single-text {
+  color: rgb(77, 80, 83);
+  font-family: Jost, serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 150%;
+  text-align: left;
+}
+
+.post__wrapper {
+  display: flex;
+  gap: 27px;
+}
+
+.blog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.blog .small_button {
+  width: 52px;
+  height: 52px;
+}
+.blog__headline {
+  color: rgb(41, 47, 54);
+  font-family: DM Serif Display, serif;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 125%;
+  text-align: left;
+  width: 305px;
+  height: 70px;
+  margin-top: 20px;
+}
+.blog__datebutton {
+  display: flex;
+  justify-content: space-between;
+  width: 340px;
+  height: 52px;
+  margin-top: 50px;
+}
+.blog__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 52px;
+}
+.blog__post {
+  height: 525px;
+  width: 340px;
+  border-radius: 70px;
+  border: rgb(244, 240, 236) 2px solid;
+  padding: 21px;
+}
+.blog__post-img {
+  height: 320px;
+  background: url("assets/blog-photo-1.png") center 70%;
+  border-top-left-radius: 70px;
+  border-top-right-radius: 70px;
+}
+.blog__post-text {
+  position: relative;
+  top: 260px;
+  left: 15px;
+  border-radius: 8px 8px 8px 0;
+  width: 124px;
+  height: 41px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.blog__post:hover {
+  background: rgb(244, 240, 236);
 }
 
 /*# sourceMappingURL=style.css.map */
