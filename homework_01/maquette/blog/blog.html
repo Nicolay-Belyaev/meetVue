@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+    <link href="../style.css" rel="stylesheet">
+    <link href="blog.css" rel="stylesheet" >
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="blogVue.js" defer></script>
+</head>
+<body>
+    <section class="header">
+        <img class="header__logo" src="../assets/index/logo.png" alt="logo">
+        <nav class="header__nav">
+            <span class="header__button">Home</span>
+            <span class="header__button">Project</span>
+            <span class="header__button">Blog</span>
+        </nav>
+    </section>
+
+    <section class="wide-banner">
+        <img src="../assets/blog/banner.png">
+    </section>
+
+    <section class="posts">
+        <span class="posts__headline">Latest Post</span>
+        <div class="posts__latest-post">
+<!--   Add  active post         -->
+        </div>
+        <span class="post__articles-headline">Articles & News</span>
+        <div id="post__articles">
+            <blogpost
+                v-for="post in posts"
+                v-bind:post="post"
+                v-bind:key="post.id"
+            ></blogpost>
+        </div>
+    </section>
+
+</body>
+</html>

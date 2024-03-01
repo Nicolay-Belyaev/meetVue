@@ -31,7 +31,7 @@ body {
 .banner {
   width: 1200px;
   height: 758px;
-  background: url("assets/banner.png") top -541px left -93px;
+  background: url("assets/index/banner.png") top -541px left -93px;
   border-radius: 70px;
 
   &__content-wrapper {
@@ -269,7 +269,7 @@ body {
   &__img {
     position: relative;
     bottom: 50px;
-    right: 180px;
+    right: 70px;
   }
 
   &__headline {
@@ -305,7 +305,7 @@ body {
 
   &__post {
     height: 525px;
-    width: 340px;
+    width: 334px;
 
     border-radius: 70px;
     border: rgb(244, 240, 236) 2px solid;

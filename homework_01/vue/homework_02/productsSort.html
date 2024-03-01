@@ -1,0 +1,44 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>Seminar_02</title>
+</head>
+<body>
+    <div id="wrapper">
+        <ol>
+            <li v-for="product in products">
+                {{ "название:" + " " + product.name + "  " + "цена:" + " " + product.price}}
+            </li>
+        </ol>
+        <button @click="sortFromHigh">Сначала дорогие</button>
+        <button @click="sortFromLow">Сначала дешевые</button>
+    </div>
+</body>
+
+<script>
+    let app = new Vue({
+        el: "#wrapper",
+        data: {
+            products: [
+                {id: 1, name: "Banana", price: 140},
+                {id:2, name: "Eggs", price: 132},
+                {id:3, name: "Bread", price: 70},
+                {id:4, name: "Mild", price: 70},
+                {id:5, name: "Cheese", price: 220}
+            ]
+        },
+        methods: {
+            sortFromHigh: function () {
+                this.products.sort((a, b) => {return  a.price > b.price ? -1 : 1})
+            },
+            sortFromLow: function () {
+                this.products.sort((a, b) => {return  a.price < b.price ? -1 : 1})
+            }
+        }
+    })
+</script>
+</html>
