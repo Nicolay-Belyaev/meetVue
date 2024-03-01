@@ -23,11 +23,26 @@
     </section>
 
     <section class="posts">
-        <span class="posts__headline">Latest Post</span>
+        <div class="post__headline">Latest Post</div>
         <div class="posts__latest-post">
-<!--   Add  active post         -->
+            <div class="post__latest">
+                <div class="post__latest-img_wrapper">
+                    <img class="post__latest-img"  src="../assets/blog/latest-pic.png" alt="latest-pic">
+                </div>
+                <div class="post__latest-text">
+                    <span class="post__latest-headline">Low Cost Latest Invented Interior Designing Ideas</span>
+                    <span>Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belief.</span>
+                    <span>Lorem Ipsum is not simply random text. It has roots in a piece of classica</span>
+                    <div class="blog__datebutton">
+                        <span class="project__card-text_small"> 26 December,2022</span>
+                        <div class="project__card-button small_button">
+                            <img src="../assets/index/triangle.png" alt="triangle">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <span class="post__articles-headline">Articles & News</span>
+        <div class="post__headline">Articles & News</div>
         <div id="post__articles">
             <blogpost
                 v-for="post in posts"
@@ -35,6 +50,30 @@
                 v-bind:key="post.id"
             ></blogpost>
         </div>
+    </section>
+
+    <section class="footer">
+        <div class="footer__logo">
+            <img class = "footer__logo-img" src="../assets/index/logo.png" alt="logo">
+            <span class = "footer__logo-text">It is a long established fact that a reader will be distracted lookings.</span>
+            <div class="footer__logo-socials">
+                <img src="../assets/index/twitter.png" alt="twitter">
+                <img src="../assets/index/in.png" alt="in">
+            </div>
+        </div>
+        <div class="footer__pages">
+            <span class="footer__pages-links bold">Pages</span>
+            <span class="footer__pages-links">Home</span>
+            <span class="footer__pages-links">Project</span>
+            <span class="footer__pages-links">Blog</span>
+        </div>
+        <div class="footer__contacts">
+            <span class="footer__contacts-line bold">Contacts</span>
+            <span class="footer__contacts-line"> 55 East Birchwood Ave. Brooklyn, New York 11201</span>
+            <span class="footer__contacts-line">contact@interno.com</span>
+            <span class="footer__contacts-line">(123) 456 - 7890</span>
+        </div>
+
     </section>
 
 </body>
