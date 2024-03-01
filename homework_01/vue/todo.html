@@ -1,0 +1,42 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>Seminar_01</title>
+</head>
+<body>
+    <div id="wrapper">
+        <ol @click="removeTask">
+            <li v-for="todo in tasks">
+                {{ todo.text }}
+            </li>
+        </ol>
+        <input v-model="newTask" @keyup.enter = "addTask">
+    </div>
+</body>
+
+<script>
+    let app = new Vue({
+        el: "#wrapper",
+        data: {
+            tasks: [
+                {text: "Train"},
+                {text: "Eat"},
+                {text: "Sleep"}
+            ],
+            newTask: ""
+        },
+        methods: {
+            addTask: function () {
+                this.tasks.push({text: this.newTask})
+            },
+            removeTask: function ({target}) {
+                target.remove();
+            }
+        }
+    })
+</script>
+</html>
