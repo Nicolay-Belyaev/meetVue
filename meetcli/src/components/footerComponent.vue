@@ -15,13 +15,13 @@ export default {
       </div>
     </div>
     <div class="links">
-      <span class="link">Pages</span>
+      <span class="link bold">Pages</span>
       <span class="link">Home</span>
       <span class="link">Project</span>
       <span class="link">Blog</span>
     </div>
     <div class="contacts">
-      <span class="contact">Contacts</span>
+      <span class="contact bold">Contacts</span>
       <span class="contact"> 55 East Birchwood Ave. Brooklyn, New York 11201</span>
       <span class="contact">contact@interno.com</span>
       <span class="contact">(123) 456 - 7890</span>
@@ -107,5 +107,9 @@ export default {
     font-weight: 400;
     line-height: 300%;
     text-align: left;
+}
+
+.bold {
+  font-weight: bold;
 }
 </style>

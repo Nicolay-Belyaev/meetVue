@@ -1,11 +1,18 @@
 <script>
+import HeaderComponent from "@/components/headerComponent.vue";
+import FooterComponent from "@/components/footerComponent.vue";
+
 export default {
-  name: "blogPageComponent"
+  name: "blogPageComponent",
+  components: {FooterComponent, HeaderComponent}
 }
 </script>
 
 <template>
-<div></div>
+<div>
+  <header-component/>
+  <footer-component/>
+</div>
 </template>
 
 <style scoped>

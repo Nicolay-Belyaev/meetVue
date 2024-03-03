@@ -40,6 +40,7 @@ export default {
     position: relative;
     top: 235px;
     left: 65px;
+    text-align: left;
   }
 
   .button {

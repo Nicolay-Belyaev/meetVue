@@ -30,6 +30,7 @@ export default {
   .img {
     height: 548px;
     width: 548px;
+    margin-bottom: 15px;
   }
   .controls {
     display: flex;
