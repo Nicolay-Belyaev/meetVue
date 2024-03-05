@@ -52,7 +52,8 @@ export default {
     <welcome-block-component/>
     <div class="follow">
       <span class="heading">Follow Our Projects</span>
-      <span class="text">It is a long established fact that a reader will be distracted by the of readable <br> content of page lookings at its layouts points.</span>
+      <span class="text">It is a long established fact that a reader will be distracted by the of readable <br>
+        content of page lookings at its layouts points.</span>
     </div>
     <div class="projects">
       <project-card-component
@@ -65,13 +66,15 @@ export default {
     <counters-component/>
     <div class="blog">
       <span class="heading">Articles & News </span>
-      <span class="text ">It is a long established fact that a reader will be distracted by the of readable <br> content of a page when lookings at its layouts the points of using.</span>
+      <span class="text ">It is a long established fact that a reader will be distracted by the of readable <br>
+        content of a page when lookings at its layouts the points of using.</span>
     </div>
     <div class="posts">
       <blog-card-component
           v-for="card in blogCards"
           :img-name="card.img"
           :headline="card.headline"
+          :label="card.label"
           :date="card.date"
           :key="card.id"
       />
@@ -104,7 +107,7 @@ export default {
   .posts {
     width: 1200px;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     margin: 0 auto;
     gap: 30px;
   }

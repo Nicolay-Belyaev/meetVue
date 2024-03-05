@@ -28,7 +28,7 @@ export default {
     border-radius: 70px;
     border: rgb(244, 240, 236) 2px solid;
 
-    width: 382px;
+    width: 334px;
     height: 470px;
     padding: 21px;
 
@@ -40,18 +40,42 @@ export default {
     }
   }
   .img {
-    width: 340px;
+    width: 334px;
     height: 289px;
     border-top-left-radius: 70px;
     border-top-right-radius: 70px;
   }
+  .label {
+    position: relative;
+    bottom: 50px;
+    left: 10px;
+    width: 105px;
+    height: 24px;
+    display: inline-flex;
+    padding: 8px 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px 8px 8px 0px;
+    background: #FFF;
+
+    color: #4D5053;
+
+    font-family: Jost;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.16px;
+    text-transform: capitalize;
+  }
   .headline {
     display: flex;
     width: 305px;
-    height: 70px;
+    height: 25px;
     flex-direction: column;
     justify-content: center;
-    margin: 21px 0 30px 0;
+    margin: 10px 0 30px 0;
 
     color: #292F36;
     font-family: "DM Serif Display";
@@ -62,10 +86,10 @@ export default {
   }
   .date-button {
     display: flex;
-    width: 340px;
+    width: 334px;
     align-items: center;
-    justify-content: space-between;
-    gap: 65px;
+    justify-content: left;
+    gap: 155px;
   }
   .button {
     background: rgb(244, 240, 236);
