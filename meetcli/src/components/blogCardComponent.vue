@@ -1,7 +1,14 @@
 <script>
+import RoundButton from "@/components/roundButton.vue";
+import router from "@/router";
+
 export default {
   name: "blogCardComponent",
-  props: ['imgName', 'label', 'headline', 'date']
+  components: {RoundButton},
+  props: ['imgName', 'label', 'headline', 'date', 'id'],
+  methods: {
+    openPost: (id) => {router.push({path: `/blog/${id}`})}
+  }
 }
 </script>
 
@@ -14,9 +21,7 @@ export default {
       <div class="headline">{{ headline }}</div>
       <div class="date-button">
         <span class="text_small"> {{ date }}</span>
-        <div class="button">
-          <img src="../assets/triangle.png" alt="triangle">
-        </div>
+        <round-button @click="openPost(id)"/>
       </div>
     </div>
 </template>
@@ -90,19 +95,5 @@ export default {
     align-items: center;
     justify-content: left;
     gap: 155px;
-  }
-  .button {
-    background: rgb(244, 240, 236);
-    border-radius: 70px;
-    width: 52px;
-    height: 52px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    img {
-      height: 16px;
-      width: 8px;
-    }
   }
 </style>

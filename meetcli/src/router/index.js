@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import mainPageComponent from "@/pages/mainPageComponent.vue";
-import blogPageComponent from "@/pages/blogPageComponent.vue";
+import allBlogPostsPageComponent from "@/pages/allBlogPostsPageComponent.vue";
 
 Vue.use(VueRouter)
 
@@ -14,7 +14,10 @@ const routes = [
   {
     path: '/blog',
     name: 'blog',
-    component: blogPageComponent
+    component: allBlogPostsPageComponent
+  },
+  {
+    path: '/blog/:id',
   }
 ]
 

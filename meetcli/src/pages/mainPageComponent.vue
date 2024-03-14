@@ -5,44 +5,18 @@ import ProjectCardComponent from "@/components/projectCardComponent.vue";
 import WelcomeBlockComponent from "@/components/welcomeBlockComponent.vue";
 import CountersComponent from "@/components/counters/countersComponent.vue";
 import BlogCardComponent from "@/components/blogCardComponent.vue";
+import {mapGetters, mapState} from "vuex";
+
 
 export default {
   name: "mainPageComponent",
+  computed: {
+    ...mapState(['projectCards', 'blogCards']),
+    ...mapGetters(['getSomeLastPosts'])
+  },
   components: {
-    BlogCardComponent, CountersComponent, WelcomeBlockComponent, ProjectCardComponent, FooterComponent, HeaderComponent},
-  data: () => {
-    return {
-      projectCards: [
-        {img: "design-1.png", corner: "top-right", id: 1},
-        {img: "design-2.png", corner: "top-left", id: 2},
-        {img: "design-3.png", corner: "bottom-right", id: 3},
-        {img: "design-4.png", corner: "bottom-left", id: 4}
-      ],
-      blogCards: [
-        {
-          id: 1,
-          img: "blog-photo-1.png",
-          label: "Kitchan Design",
-          headline: "Let’s Get Solution For Building Construction Work",
-          date: "26 December, 2022",
-        },
-        {
-          id: 2,
-          img: "blog-photo-2.png",
-          label: "Living Design",
-          headline: "Low Cost Latest Invented Interior Designing Ideas.",
-          date: "26 December, 2022",
-         },
-        {
-          id: 3,
-          img: "blog-photo-3.png",
-          label: "Interior Design",
-          headline: "Best For Any Office & Business Interior Solution",
-          date: "26 December, 2022",
-         },
-      ]
-    }
-  }
+    BlogCardComponent, CountersComponent, WelcomeBlockComponent,
+    ProjectCardComponent, FooterComponent, HeaderComponent},
 }
 </script>
 
@@ -58,8 +32,8 @@ export default {
     <div class="projects">
       <project-card-component
         v-for="card in projectCards"
+        :rounded-corner = card.corner
         :img-name="card.img"
-        :rounded-corner="card.corner"
         :key="card.id"
       />
     </div>
@@ -71,16 +45,15 @@ export default {
     </div>
     <div class="posts">
       <blog-card-component
-          v-for="card in blogCards"
+          v-for="card in getSomeLastPosts(3)"
           :img-name="card.img"
           :headline="card.headline"
           :label="card.label"
           :date="card.date"
+          :id="card.id"
           :key="card.id"
       />
     </div>
-
-
     <footer-component/>
   </div>
 </template>
@@ -93,6 +66,7 @@ export default {
     flex-wrap: wrap;
     column-gap: 104px;
     row-gap: 60px;
+
   }
   .follow {
     display: flex;
